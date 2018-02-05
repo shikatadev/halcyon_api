@@ -11,6 +11,6 @@ gemfile: Gemfile
 script: bundle exec rspec spec
 addons:
   code_climate:
-    repo_token: d20c1b4862616550a65962ceecf0299c70a844cbce54a230b5234804ac2725dc
+    repo_token: adb0d5afb7471b3ec7edc3820093500b1176c6e8bc42b831098274bac1b18516
 after_success:
   - bundle exec codeclimate-test-reporter
