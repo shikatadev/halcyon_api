@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.summary     = 'Vainglory API'
   s.description = 'A Ruby libary wrapper for the Vainglory API'
   s.authors     = ['Ethan Tang']
-  s.homepage    = 'https://bitbucket.org/shikataganai/vainglory-api'
-  s.license     = 'None'
+  s.homepage    = 'https://github.com/shikatadev/vainglory-api'
+  s.license     = 'MIT'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- spec/*`.split("\n")
