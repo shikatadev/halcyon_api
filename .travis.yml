@@ -16,4 +16,4 @@ after_success:
   - bundle exec codeclimate-test-reporter
 deploy:
   provider: rubygems
-	api_key: "db834ae39f6641e012d048861020cd33"
+  api_key: "db834ae39f6641e012d048861020cd33"
