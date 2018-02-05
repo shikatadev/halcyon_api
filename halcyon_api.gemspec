@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.summary     = 'Vainglory API'
   s.description = 'A Ruby libary wrapper for the Vainglory API'
   s.authors     = ['Ethan Tang']
-  s.homepage    = 'https://github.com/shikatadev/halcyon-api'
+  s.homepage    = 'https://github.com/shikatadev/halcyon_api'
   s.license     = 'MIT'
 
   s.files         = `git ls-files`.split("\n")
