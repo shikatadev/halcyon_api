@@ -1,11 +1,11 @@
 language: ruby
 rvm:
-  - 2.5.0
-  - 2.4.0
-  - 2.3.3
-  - 2.2
-  - 2.1
-  - 2.0
+- 2.5.0
+- 2.4.0
+- 2.3.3
+- 2.2
+- 2.1
+- 2.0
 sudo: false
 gemfile: Gemfile
 script: bundle exec rspec spec
@@ -13,4 +13,12 @@ addons:
   code_climate:
     repo_token: d20c1b4862616550a65962ceecf0299c70a844cbce54a230b5234804ac2725dc
 after_success:
-  - bundle exec codeclimate-test-reporter
+- bundle exec codeclimate-test-reporter
+deploy:
+  provider: rubygems
+  api_key:
+    secure: kMAD9dFHCyV3ncTj4zzpStw0TBCIgKcOGOjXGIdHne+jU7dsxKiGarqMQYQ2E3M/D6u6E2D0asHoHFX8ZKewEZWh4/vd95uwS0OEIEGVG5dMeeqYywRGY/4dvKqYmLT8DIzN/R4YwpW7c+zwafZsLUn802AshCoZ8CKP6FIZi/DNxR9QaolaJ8kjYzwyQDft1XQJVCGxpUm3iqbcx8P5PaJWfM0xHDlB+b9xdGvWA3w0brdG5HUDMIcROcQ1wvC9QApqwTNYMh8szhqLZrdLg9lY8/BrH0yBN9wV9B7Sz3HewSNxhsjlWmv5Lx011Pzs3dQ6xUDsX8L0eNqAD7BdeIiLa/BtQx/AH0CWe2Ib+RAsIKOukD0q6DZkzqfSaVJfi2OB2yfTYoa/4UUXAMLDEK0MSvK1/T9SxHaDGk7ymiRkULMDoZ0FwDmCs4KM9XfjE0ePo5VRnEJcpWfoLC7ySoJsfWYFrDzHrt6Cn6L6xRRWMsDsqdRW+XrqrzYcJjGhvDjIgm8QPrViQuThLr74qgmrQdxN659Sf1JhuO7QjW7ed8RfiCM4x9SLqDQv2JmdtAFKkf2wfRipxHsnAHZILwki14bIRDI1UfXCHDSQjQDxHFw/oD06m4MxYb/B/5M2qeRyeWqCtXfqYakPg2CNLvUosoiHvFoA8GPLIZqJ4v0=
+  gem: vainglory-api-rb
+  on:
+    tags: true
+    repo: shikatadev/vainglory-api
