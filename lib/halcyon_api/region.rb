@@ -38,7 +38,7 @@ module HalcyonAPI
     #
     # @param (String) identifier the name or short name of a region
     # @return [Region] a new instance of a Region
-    # @raise [VaingloryAPI::RegionNameError] if the identifier is not found
+    # @raise [HalcyonAPI::RegionNameError] if the identifier is not found
     # @see SHORT_NAMES
     # @see DB
     def initialize(identifier)
@@ -60,8 +60,8 @@ module HalcyonAPI
     # Compares region to another region.
     #
     # @example Compare two regions
-    #   VaingloryAPI::Region['na'].eql? VaingloryAPI::Region['na'] # => true
-    #   VaingloryAPI::Region['na'].eql? VaingloryAPI::Region['sg'] # => false
+    #   HalcyonAPI::Region['na'].eql? VaingloryAPI::Region['na'] # => true
+    #   HalcyonAPI::Region['na'].eql? VaingloryAPI::Region['sg'] # => false
     # @param [VaingloryAPU::Region] other another region to compare for quality
     # @return [Boolean] whether all attributes match
     def eql?(other)
@@ -75,8 +75,8 @@ module HalcyonAPI
       # Checks if short name is known
       #
       # @example Checking if a short name is valid
-      #   VaingloryAPI::Region.valid_short_name?('na') # => true
-      #   VaingloryAPI::Region.valid_short_name?('QQ') # => false
+      #   HalcyonAPI::Region.valid_short_name?('na') # => true
+      #   HalcyonAPI::Region.valid_short_name?('QQ') # => false
       # @param [String] short_name the short name of a desired region
       # @return [Boolean] whether the short name is known
       # @see SHORT_NAMES
@@ -88,7 +88,7 @@ module HalcyonAPI
       # Detects region data from DB constant
       #
       # @example Detecting region data from DB
-      #   VaingloryAPI::Region.detech_region_info('na')
+      #   HalcyonAPI::Region.detech_region_info('na')
       # @param [String] identifier the name or short name of the desired region
       # @return [Array] if region data is found
       # @return [nil] if region data is not found

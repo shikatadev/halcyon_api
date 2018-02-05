@@ -3,7 +3,7 @@ require 'vcr'
 require 'rspec'
 require 'support/klasses'
 require 'simplecov'
-require 'vainglory_api'
+require 'halcyon_api'
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/cassettes"
