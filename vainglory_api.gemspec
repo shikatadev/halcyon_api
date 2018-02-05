@@ -2,7 +2,7 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'vainglory_api/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'vainglory-api'
+  s.name        = 'vainglory-api-rb'
   s.version     = VaingloryAPI::VERSION.dup
   s.date        = VaingloryAPI::RELEASE_DATE.dup
   s.platform    = Gem::Platform::RUBY
