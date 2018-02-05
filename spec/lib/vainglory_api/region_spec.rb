@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe VaingloryAPI::Region do
+describe HalcyonAPI::Region do
   describe '#abbreviation' do
     it 'returns the short name' do
       region = subject.new('ea')
@@ -9,14 +9,14 @@ describe VaingloryAPI::Region do
   end
 
   describe '#eql?' do
-    let(:region) { VaingloryAPI::Region['na'] }
+    let(:region) { HalcyonAPI::Region['na'] }
 
     it 'returns TRUE when all attributes match' do
-      expect(region.eql?(VaingloryAPI::Region.new('na'))).to be true
+      expect(region.eql?(HalcyonAPI::Region.new('na'))).to be true
     end
 
     it 'returns FALSE when any attribute does not match' do
-      expect(region.eql?(VaingloryAPI::Region.new('eu'))).to be false
+      expect(region.eql?(HalcyonAPI::Region.new('eu'))).to be false
     end
   end
 
@@ -30,7 +30,7 @@ describe VaingloryAPI::Region do
     end
 
     it 'raises an error when region identifier not found' do
-      expect { subject.new('QQ') }.to raise_error VaingloryAPI::RegionNameError
+      expect { subject.new('QQ') }.to raise_error HalcyonAPI::RegionNameError
     end
   end
 

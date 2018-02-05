@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe VaingloryAPI::Client, vcr: true do
+describe HalcyonAPI::Client, vcr: true do
   let(:valid_api_key) { 'valid_api_key' }
   let(:client) { subject.new(valid_api_key) }
   let(:cached_matches) { let_cassette('matches') { client.matches } }
   let(:cached_players) { cached_matches.included.select { |i| i.type == 'player' }}
 
   it 'validates the region' do
-    expect { subject.new('API KEY', 'QQ') }.to raise_error VaingloryAPI::RegionNameError
+    expect { subject.new('API KEY', 'QQ') }.to raise_error HalcyonAPI::RegionNameError
   end
 
   describe 'metadata' do

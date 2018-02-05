@@ -1,10 +1,10 @@
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
-require 'vainglory_api/version'
+require 'halcyon_api/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'vainglory-api-rb'
-  s.version     = VaingloryAPI::VERSION.dup
-  s.date        = VaingloryAPI::RELEASE_DATE.dup
+  s.name        = 'halcyon_api'
+  s.version     = HalcyonAPI::VERSION.dup
+  s.date        = HalcyonAPI::RELEASE_DATE.dup
   s.platform    = Gem::Platform::RUBY
   s.summary     = 'Vainglory API'
   s.description = 'A Ruby libary wrapper for the Vainglory API'

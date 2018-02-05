@@ -2,9 +2,9 @@ require 'json'
 require 'ostruct'
 require 'openssl'
 require 'net/http'
-require 'vainglory_api/region'
+require 'halcyon_api/region'
 
-module VaingloryAPI
+module HalcyonAPI
   # Used to interface with the official Vainglory API
   #
   # @see https://developer.vainglorygame.com/docs Vainglory API Documentation

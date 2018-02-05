@@ -1,6 +1,6 @@
 require 'ostruct'
 
-module VaingloryAPI
+module HalcyonAPI
   # Helper class for metadata pertaining to regions
   #
   # @see https://developer.vainglorygame.com/docs#regions Vainglory API "Regions"
