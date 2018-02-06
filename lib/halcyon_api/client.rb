@@ -19,10 +19,10 @@ module HalcyonAPI
     # @param (String) api_key your Vainglory API key
     # @param (String) region_identifier the name or short name for your specified Region shard
     # @example Initialize a new client
-    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client = HalcyonAPI::Client.new('API_KEY', 'na')
     # @return [Client] a new instance of the client
     # @note Requires a valid region short name.
-    # @see VaingloryAPI::Region::SHORT_NAMES
+    # @see HalcyonAPI::Region::SHORT_NAMES
     def initialize(api_key, region_identifier = 'na')
       @api_key = api_key
       @region = Region.find(region_identifier)
@@ -37,7 +37,7 @@ module HalcyonAPI
     # @option filter_params [String] 'filter[createdAt-start]' (3hrs ago)  Must occur before end time. Format is iso8601
     # @option filter_params [String] 'filter[createdAt-end]' (Now) Queries search the last 3 hrs. Format is iso8601
     # @example Get samples
-    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client = HalcyonAPI::Client.new('API_KEY', 'na')
     #   client.samples
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#samples Vainglory API "Samples"
@@ -60,10 +60,10 @@ module HalcyonAPI
     # @option filter_params [String] 'filter[teamNames]' Filters by team names. Team names are the same as the in game team tags.
     # @option filter_params [String] 'filter[gameMode]' Filters by Game Mode
     # @example Get matches
-    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client = HalcyonAPI::Client.new('API_KEY', 'na')
     #   client.matches
     # @example Get matches with a filter
-    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client = HalcyonAPI::Client.new('API_KEY', 'na')
     #   client.matches('filter[playerNames]' => 'player_name')
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#get-a-collection-of-matches Vainglory API "Get a collection of Matches"
@@ -79,7 +79,7 @@ module HalcyonAPI
     #
     # @param [String] match_id the ID of the requested match
     # @example Get a single match
-    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client = HalcyonAPI::Client.new('API_KEY', 'na')
     #   client.match('MATCH_ID')
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#get-a-single-match Vainglory API "Get a single Match"
@@ -94,10 +94,10 @@ module HalcyonAPI
     # @param [String] player_name the in-game name (IGN) of a player
     # @param [String] additional_player_names additional IGNs for search for
     # @example Search for a player
-    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client = HalcyonAPI::Client.new('API_KEY', 'na')
     #   client.players('player_name')
     # @example Search for multiple players
-    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client = HalcyonAPI::Client.new('API_KEY', 'na')
     #   client.players('player_name', 'player_name2')
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#get-a-collection-of-players Vainglory API "Get a collection of players"
@@ -112,7 +112,7 @@ module HalcyonAPI
     #
     # @param [String] player_id the ID of the requested player
     # @example Get a single player
-    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client = HalcyonAPI::Client.new('API_KEY', 'na')
     #   client.match('PLAYER_ID')
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#get-a-single-player Vainglory API "Get a single Player"
@@ -124,7 +124,7 @@ module HalcyonAPI
     #
     # @param [String] url the URL of the requested Telemetry data
     # @example Get telemetry data
-    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client = HalcyonAPI::Client.new('API_KEY', 'na')
     #   client.telemetry('TELEMETRY_URL')
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#telemetry Vainglory API "Telemetry"
@@ -162,7 +162,7 @@ module HalcyonAPI
     # Gets current API version and release date
     #
     # @example Get the API's status information
-    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client = HalcyonAPI::Client.new('API_KEY', 'na')
     #   client.status
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#versioning Vainglory API "Versioning"

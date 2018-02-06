@@ -60,8 +60,8 @@ module HalcyonAPI
     # Compares region to another region.
     #
     # @example Compare two regions
-    #   HalcyonAPI::Region['na'].eql? VaingloryAPI::Region['na'] # => true
-    #   HalcyonAPI::Region['na'].eql? VaingloryAPI::Region['sg'] # => false
+    #   HalcyonAPI::Region['na'].eql? HalcyonAPI::Region['na'] # => true
+    #   HalcyonAPI::Region['na'].eql? HalcyonAPI::Region['sg'] # => false
     # @param [VaingloryAPU::Region] other another region to compare for quality
     # @return [Boolean] whether all attributes match
     def eql?(other)
