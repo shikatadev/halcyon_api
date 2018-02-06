@@ -12,9 +12,9 @@ module HalcyonAPI
       ['general', 'sa', 'South America'],
       ['general', 'ea', 'East Asia'],
       ['general', 'sg', 'Southeast Asia (SEA)'],
+      ['general', 'cn', 'China'],
       ['tournament', 'tournament-na', 'North America Tournaments'],
       ['tournament', 'tournament-eu', 'Europe Tournaments'],
-      ['tournament', 'tournament-sa', 'South America Tournaments'],
       ['tournament', 'tournament-ea', 'East Asia Tournaments'],
       ['tournament', 'tournament-sg', 'Southeast Asia Tournaments']
     ].freeze

@@ -158,7 +158,6 @@ module HalcyonAPI
     def link(_link_id)
       raise(NotImplementedError, 'Coming soon!')
     end
-
     # Gets current API version and release date
     #
     # @example Get the API's status information
